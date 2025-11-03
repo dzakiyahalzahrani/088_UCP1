@@ -48,7 +48,7 @@ db.sequelize.sync()
                 return res.status(404).send({ message: 'Buku tidak ditemukan' });
             }
             await buku.update(data);
-            res.send({ message: 'Buku berhasil diupdate', Buku });
+            res.send({ message: 'Buku berhasil diupdate', buku });
         } catch (err) {
             res.status(500).send(err);
         }
